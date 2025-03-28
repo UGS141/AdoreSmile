@@ -1,0 +1,71 @@
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-top: 1px solid #eee;
+   /* margin-top: 4rem;*/
+}
+
+.rocket-delivery {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.rocket-img {
+    width: 40px;
+}
+
+.delivery-text h3 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.company-info {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 40px;
+}
+.logo-img {
+    height: 40px;
+}
+.icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.icons a {
+    text-decoration: none;
+   
+}
+footer {
+    background-color: black; 
+   color: white;
+   text-align: center;
+   padding: 0px 0;
+  /* position: fixed;*/
+   /*bottom: 0;*/
+   width: 100%;
+}
+header {
+    background: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
