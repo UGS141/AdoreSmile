@@ -55,7 +55,7 @@
     color: var(--text-dark);
     position: relative;
     gap: 6px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; 
 }
 
 .nav-link i {
@@ -212,12 +212,12 @@
 }
 
 /* Fix for main content spacing */
-.main-content {
+/* .main-content {
     padding-top: calc(var(--header-height) + 20px);
     min-height: calc(100vh - var(--header-height));
     display: flex;
     flex-direction: column;
-}
+} */
 /* ... existing header styles ... */
 
 /* Footer Styles */
