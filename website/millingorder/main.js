@@ -1,25 +1,25 @@
 // Product data
 const productData = {
     milledmetal: [
-        { id: 1, title: 'Titanium Custom Abutment', image: 'images/products/titanium-abutment.jpg' },
-        { id: 2, title: 'Zirconia Custom Abutment', image: 'images/products/zirconia-abutment.jpg' },
-        { id: 3, title: 'Pre-Milled Abutment', image: 'images/products/premilled-abutment.jpg' }
+        { id: 1, title: 'Titanium Custom Abutment', image: 'img/titanium custom abunment.PNG' },
+        { id: 2, title: 'Zirconia Custom Abutment', image: 'img/Zirconia-custom-Abutment-1.jpg' },
+        { id: 3, title: 'Pre-Milled Abutment', image: 'img/premilled-abutment.jpg' }
     ],
     slmmetal: [
-        { id: 4, title: 'Co-Cr Crown & Bridge', image: 'images/products/cocr-crown.jpg' },
-        { id: 5, title: 'Titanium Framework', image: 'images/products/titanium-framework.jpg' }
+        { id: 4, title: 'Co-Cr Crown & Bridge', image: 'img/co-cr crown.jpg' },
+        { id: 5, title: 'Titanium Framework', image: 'img/titanium framework.png' }
     ],
     softmetal: [
-        { id: 6, title: 'PMMA Temporary', image: 'images/products/pmma-temp.jpg' },
-        { id: 7, title: 'Zirconia Crown', image: 'images/products/zirconia-crown.jpg' }
+        { id: 6, title: 'PMMA Temporary', image: 'img/pmma-temp.jpg' },
+        { id: 7, title: 'Zirconia Crown', image: 'img/zirconia-crown.jpg' }
     ],
-    '3dprinting': [
-        { id: 8, title: 'Model Printing', image: 'images/products/model-printing.jpg' },
-        { id: 9, title: 'Surgical Guide', image: 'images/products/surgical-guide.jpg' }
+    printing: [
+        { id: 8, title: 'Model Printing', image: 'img/model-printing.jpg' },
+        { id: 9, title: 'Surgical Guide', image: 'img/surgical guide.jpg' }
     ],
     additional: [
-        { id: 10, title: 'Scan Body', image: 'images/products/scan-body.jpg' },
-        { id: 11, title: 'Analog', image: 'images/products/analog.jpg' }
+        { id: 10, title: 'Scan Body', image: 'img/scan-body.jpg' },
+        { id: 11, title: 'Analog', image: 'img/analog.jpg' }
     ]
 };
 
@@ -63,7 +63,7 @@ function populateProducts(categoryId) {
 // Handle product selection
 function selectProduct(title, image) {
     sessionStorage.setItem('selectedTitle', title);
-    sessionStorage.setItem('selectedImage', image);
+    sessionStorage.setItem('selectedImage', image); 
     window.location.href = 'order.html';
 }
 

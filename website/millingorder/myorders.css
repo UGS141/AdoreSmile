@@ -2,7 +2,7 @@
     --primary-color: #FFB800;
     --secondary-color: #2C3E50;
     --border-color: #E1E8ED;
-    --background-color: #F8F9FA;
+    --background-color: hsl(210, 17%, 98%);
     --success-color: #28a745;
     --warning-color: #ffc107;
     --danger-color: #dc3545;
@@ -10,11 +10,11 @@
 
 .main-content {
     min-height: calc(100vh - 160px);
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
     padding-top: 80px;
 }
 
-.container {
+.container { 
     max-width: 1400px;
     margin: 0 auto;
     padding: 2rem;

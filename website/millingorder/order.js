@@ -1,29 +1,29 @@
 // Type definitions
-interface Order {
-    id: string;
-    product: string;
-    status: 'In Progress' | 'Completed' | 'Pending';
-    date: string;
-}
+// interface Order {
+//     id: string;
+//     product: string;
+//     status: 'In Progress' | 'Completed' | 'Pending';
+//     date: string;
+// }
 
-interface ToothData {
-    id: number;
-    imgUrl: string;
-    label: string;
-}
+// interface ToothData {
+//     id: number;
+//     imgUrl: string;
+//     label: string;
+// }
 
-interface FileItem {
-    name: string;
-    type: string;
-    size: number;
-}
+// interface FileItem {
+//     name: string;
+//     type: string;
+//     size: number;
+// }
 
 // Constants
-const orders: Order[] = [
-    { id: 'ORD-001', product: 'Milling Order', status: 'In Progress', date: '2024-03-15' },
-    { id: 'ORD-002', product: 'Design + Milling', status: 'Completed', date: '2024-03-14' },
-    { id: 'ORD-003', product: 'Scan + Design', status: 'Pending', date: '2024-03-13' }
-];
+// const orders: Order[] = [
+//     { id: 'ORD-001', product: 'Milling Order', status: 'In Progress', date: '2024-03-15' },
+//     { id: 'ORD-002', product: 'Design + Milling', status: 'Completed', date: '2024-03-14' },
+//     { id: 'ORD-003', product: 'Scan + Design', status: 'Pending', date: '2024-03-13' }
+// ];
 
 // DOM Elements with type safety
 const title: string | null = sessionStorage.getItem("selectedTitle");
@@ -41,24 +41,24 @@ if (orderImage && image) {
 let files: File[] = [];
 
 // Display orders with type safety
-function displayOrders(): void {
-    const tbody: HTMLElement | null = document.querySelector('#orderTable tbody');
-    if (tbody) {
-        tbody.innerHTML = orders.map((order: Order) => `
-            <tr>
-                <td>${order.id}</td>
-                <td>${order.product}</td>
-                <td>${order.status}</td>
-                <td>${order.date}</td>
-                <td>
-                    <button class="btn-download" onclick="downloadOrder('${order.id}')">
-                        Download
-                    </button>
-                </td>
-            </tr>
-        `).join('');
-    }
-}
+// function displayOrders(): void {
+//     const tbody: HTMLElement | null = document.querySelector('#orderTable tbody');
+//     if (tbody) {
+//         tbody.innerHTML = orders.map((order: Order) => `
+//             <tr>
+//                 <td>${order.id}</td>
+//                 <td>${order.product}</td>
+//                 <td>${order.status}</td>
+//                 <td>${order.date}</td> 
+//                 <td>
+//                     <button class="btn-download" onclick="downloadOrder('${order.id}')">
+//                         Download
+//                     </button>
+//                 </td>
+//             </tr>
+//         `).join('');
+//     }
+// }
 
 // Download functionality with type checking
 function downloadOrder(orderId: string): void {
