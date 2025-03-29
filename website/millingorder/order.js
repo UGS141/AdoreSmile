@@ -358,7 +358,7 @@ function showToothIcons() {
 
 
     const label = document.createElement("label");
-    label.textContent = "Your Message:";
+    label.textContent = "Message";
     label.setAttribute("for", "messageBox");
 
     const textarea = document.createElement("textarea");
