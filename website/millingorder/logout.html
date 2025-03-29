@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdoreSmile | Logged Out</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="headerfooter.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FFB800;
+            --secondary-color: #333;
+            --accent-color: #0056b3;
+            --light-bg: #f8f9fa;
+            --border-color: #e0e0e0;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: var(--secondary-color);
+        }
+        
+        .logout-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .logout-header {
+            margin-bottom: 30px;
+        }
+        
+        .logout-header h1 {
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .logout-header p {
+            color: #666;
+            font-size: 1.2rem;
+        }
+        
+        .logout-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .logout-gif {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary-color);
+        }
+        
+        .quote-box {
+            background-color: #f9f9f9;
+            border-left: 5px solid var(--primary-color);
+            padding: 20px;
+            margin: 30px 0;
+            text-align: left;
+            border-radius: 5px;
+        }
+        
+        .quote-box p {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .quote-author {
+            font-weight: 600;
+            text-align: right;
+        }
+        
+        .service-highlights {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .service-item {
+            flex: 0 0 30%;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .service-item i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .service-item h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+        
+        .action-buttons {
+            margin-top: 40px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 0 10px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--secondary-color);
+            border: 2px solid var(--secondary-color);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn-primary:hover {
+            background-color: #e0a400;
+            border-color: #e0a400;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .logout-container {
+                padding: 20px;
+                margin: 30px 15px;
+            }
+            
+            .service-highlights {
+                flex-direction: column;
+            }
+            
+            .service-item {
+                flex: 0 0 100%;
+            }
+            
+            .action-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="brand-section">
+                <img src="img/adoresmile.png" alt="AdoreSmile MILLING" class="logo-img">
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="order.html" class="nav-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>Notifications</span>
+                    <div class="notification-count">0</div>
+                </a>
+                <a href="login.html" class="nav-link">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Login</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="logout-container">
+            <div class="logout-header">
+                <h1>You've Been Successfully Logged Out</h1>
+                <p>Thank you for using AdoreSmile Dental Milling services!</p>
+            </div>
+            
+            <div class="logout-content">
+                <img src="https://media.giphy.com/media/XD9o33QG9BoMis7iM4/giphy.gif" alt="Thank You" class="logout-gif">
+                
+                <div class="quote-box">
+                    <p>"At AdoreSmile, we believe that a perfect smile is not just about aesthetics, but about precision, quality, and care. Our dental milling solutions are designed to bring your 3D scans to life with unparalleled accuracy."</p>
+                    <div class="quote-author">- AdoreSmile Team</div>
+                </div>
+            </div>
+            
+            <h2>Our Premium Services</h2>
+            <div class="service-highlights">
+                <div class="service-item">
+                    <i class="fas fa-tooth"></i>
+                    <h3>Custom Abutments</h3>
+                    <p>Precision-milled titanium abutments customized for perfect fit and function.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-crown"></i>
+                    <h3>Dental Crowns</h3>
+                    <p>High-quality crowns with exceptional marginal fit and natural aesthetics.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-cog"></i>
+                    <h3>3D Scan Processing</h3>
+                    <p>Advanced processing of your 3D scans for optimal milling results.</p>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="login.html" class="btn btn-primary">Log In Again</a>
+                <a href="about-adoresmile.html" class="btn btn-secondary">Explore More About AdoreSmile</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="rocket-delivery">
+                    <img src="img/adoresmile.png" alt="AdoreSmile" class="footer-logo">
+                    <div class="delivery-text">
+                        <h3>ROCKET DELIVERY</h3>
+                        <p>Order by 11am Same day dispatch!</p>
+                    </div>
+                </div>
+                <div class="company-info">
+                    <p>Registered in England and Wales No. 09701612</p>
+                    <p>Registered Office: 26C Lyon Road, Walton-on-Thames,</p>
+                    <p>Surrey, KT12 3PU United Kingdom</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Redirect to login page after 60 seconds
+        setTimeout(function() {
+            window.location.href = "login.html";
+        }, 60000);
+    </script>
+</body>
+</html>

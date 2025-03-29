@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adoresmile | Order Review</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="headerfooter.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
@@ -38,12 +40,103 @@
             margin: 0 1rem;
         }
 
+        .welcome-section {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem 1rem;
+        }
+        
+        .welcome-section h1 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .welcome-section h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .welcome-section p {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .separator {
+            height: 3px;
+            background-color: #FFB800;
+            width: 150px;
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+        
         .shipping-section {
             background: white;
             border-radius: 15px;
             padding: 2rem;
+            margin: 0 auto 2rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 1000px;
+        }
+        
+        .order-table {
             margin-bottom: 2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow-x: auto;
+        }
+        
+        .order-table table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .order-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+        
+        .order-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .order-table .no-data td {
+            text-align: center;
+            padding: 2rem;
+            color: #888;
+        }
+        
+        .input-with-info {
+            position: relative;
+        }
+        
+        .info-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+        
+        .right-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn-add-order {
+            background: #f0f0f0;
+            color: var(--secondary-color);
+        }
+        
+        .btn-complete {
+            background: var(--primary-color);
+            color: white;
         }
 
         .section-title {
@@ -137,24 +230,24 @@
     <!-- Header same as other pages -->
     <header class="main-header">
         <div class="header-container">
-            <div class="logo">
-                <img src="img/adoresmile.png" alt="AdoreSmile MILLING">
+            <div class="brand-section">
+                <img src="img/adoresmile.png" alt="AdoreSmile MILLING" class="logo-img">
             </div>
             <nav class="nav-menu">
-                <a href="index.html" class="nav-item">
+                <a href="index.html" class="nav-link">
                     <i class="fa-solid fa-house"></i>
                     <span>Home</span>
                 </a>
-                <a href="order.html" class="nav-item">
+                <a href="orderrreview.html" class="nav-link">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span>Cart</span>
                 </a>
-                <a href="#" class="nav-item">
+                <a href="under-construction.html" class="nav-link">
                     <i class="fa-regular fa-bell"></i>
                     <span>Notifications</span>
-                    <span class="notification-badge">2</span>
+                    <div class="notification-count">2</div>
                 </a>
-                <a href="myOrders.html" class="nav-item">
+                <a href="myOrders.html" class="nav-link">
                     <i class="fa-regular fa-user"></i>
                     <span>Profile</span>
                 </a>

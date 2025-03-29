@@ -298,7 +298,7 @@ function showToothIcons() {
         } else {
             addDetailsBox(tooth.id);
         }
-        });
+        });  
     
         const label = document.createElement("span");
         label.classList.add("tooth-label");
@@ -356,20 +356,59 @@ function showToothIcons() {
     selectBox1.appendChild(group4);
     selectBox2.appendChild(group5);
 
-
+    const messagediv = document.createElement("div");
+    messagediv.style.paddingTop = "30px";
     const label = document.createElement("label");
     label.textContent = "Message";
+    label.style.marginTop = "10px";
     label.setAttribute("for", "messageBox");
 
     const textarea = document.createElement("textarea");
+    textarea.classList.add("message-box");
     textarea.id = "messageBox"; // Set ID to match label's "for" attribute
     textarea.placeholder = "You can leave any message here";
     textarea.rows = 5;
     textarea.style.width = "100%";
+    messagediv.appendChild(label);
+    messagediv.appendChild(textarea); 
 
     optionsContainer.appendChild(optionsBox);
     optionsContainer.appendChild(selectBox1);
     optionsContainer.appendChild(selectBox2);
+    optionsContainer.appendChild(messagediv);
+
+    if(files.length > 0) {
+        const checkboxContainer = document.createElement("div");
+checkboxContainer.classList.add("checkbox-container");
+
+// Generate checkboxes dynamically
+files.forEach(file => {
+    const div = document.createElement("div");
+    div.classList.add("checkbox-item");
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.checked = true; // Checked by default
+    checkbox.disabled = true; // Prevent changing
+    checkbox.classList.add("file-checkbox");
+
+    const label = document.createElement("label");
+    label.textContent = file.name;
+    label.classList.add("file-label");
+
+    div.appendChild(checkbox);
+    div.appendChild(label);
+    checkboxContainer.appendChild(div);
+});
+
+// Append checkboxes to body
+optionsContainer.appendChild(checkboxContainer);
+
+// Create full-width green line
+const greenLine = document.createElement("div");
+greenLine.classList.add("green-line");
+optionsContainer.appendChild(greenLine);
+    }
 
 
     function addDetailsBox(toothId) {
@@ -395,9 +434,7 @@ function showToothIcons() {
 
         const implantSystemSelect = createSelect(["System 1", "System 2", "System 3"], "Implant System");
         const implantSizeSelect = createSelect(["Size A", "Size B", "Size C"], "Implant Size");
-        // picklistRow.appendChild(implantSystemLabel);
         picklistRow.appendChild(implantSystemSelect);
-        // picklistRow.appendChild(implantSizeLabel);
         picklistRow.appendChild(implantSizeSelect);
     
         // Screw Channel (Radio Group)
@@ -463,8 +500,31 @@ function showToothIcons() {
             option.textContent = opt;
             select.appendChild(option);
         });
+        container.appendChild(label);
+        container.appendChild(select);
+    
+        return container;
     }
-});
+    function createRadioGroup(options, name) {
+        const radioGroup = document.createElement("div");
+        radioGroup.classList.add("radio-group");
+    
+        options.forEach((opt) => {
+            const label = document.createElement("label");
+            label.classList.add("radio-label");
+    
+            const radio = document.createElement("input");
+            radio.type = "radio";
+            radio.name = name;
+            label.appendChild(radio);
+            label.appendChild(document.createTextNode(opt));
+            
+            radioGroup.appendChild(label);
+        });
+    
+        return radioGroup;
+    }
+};
 
 // Make removeFile available globally
-(window as any).removeFile = removeFile;
+window.removeFile = removeFile;
