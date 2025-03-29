@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoresmile | Milling Order</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="headerfooter.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="img/adoresmile.png" alt="AdoreSmile MILLING">
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="order.html" class="nav-item active">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>Notifications</span>
+                    <span class="notification-badge">2</span>
+                </a>
+                <a href="myOrders.html" class="nav-item">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <form id="orderForm" class="order-form">
+            <div class="order-header">
+                <h1>Create New Order</h1>
+                <p class="breadcrumb">Home > New Order > Custom Abutment</p>
+            </div>
+
+            <div class="main-container">
+                <div class="img-container">
+                    <img alt="Milling Image" id="order-image" class="preview-image">
+                </div>
+
+                <div class="content-container">
+                    <div class="card">
+                        <h2>Custom Abutment</h2>
+                        
+                        <div class="form-group">
+                            <label for="product">Product<span class="required">*</span></label>
+                            <select id="product" class="styled-select" required>
+                                <option value="">Titanium Custom Abutment</option>
+                            </select>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="orderRef">Order Reference<span class="required">*</span></label>
+                            <input type="text" id="orderRef" class="styled-input" required>
+                        </div>
+
+                        <div class="file-upload-container">
+                            <div class="upload-box" id="dropZone">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <h3>Upload Files</h3>
+                                <p>Drag and drop files here or click to browse</p>
+                                <div class="file-types">
+                                    <p>Supported files:</p>
+                                    <span>exocad - stl, constructioninfo</span>
+                                    <span>3shape - stl, xml</span>
+                                </div>
+                                <input type="file" id="fileInput" multiple hidden>
+                                <button type="button" class="upload-btn">Select Files</button>
+                            </div>
+                            <div id="fileList" class="file-list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tooth-section card">
+                <h3>Select Teeth</h3>
+                <div class="tooth-container" id="toothContainer">
+                    <!-- Teeth will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div id="detailsContainer" class="details-section card">
+                <!-- Details will be populated by JavaScript -->
+            </div>
+
+            <div id="optionsContainer" class="options-section card">
+                <!-- Options will be populated by JavaScript -->
+            </div>
+
+            <div class="form-actions">
+                <div class="certification">
+                    <input type="checkbox" id="certify" required>
+                    <label for="certify">I hereby certify that the above statements are true and correct to the best of my knowledge.<span class="required">*</span></label>
+                </div>
+                <button id="submitOrder" type="submit" class="submit-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add To Cart
+                </button>
+            </div>
+        </form>
+    </main>
+
+       <!-- Replace the existing footer with this -->
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="rocket-delivery">
+                <img src="img/adoresmile.png" alt="AdoreSmile" class="footer-logo">
+                <div class="delivery-text">
+                    <h3>ROCKET DELIVERY</h3>
+                    <p>Order by 11am Same day dispatch!</p>
+                </div>
+            </div>
+            <div class="company-info">
+                <p>Registered in England and Wales No. 09701612</p>
+                <p>Registered Office: 26C Lyon Road, Walton-on-Thames,</p>
+                <p>Surrey, KT12 3PU United Kingdom</p>
+            </div>
+        </div>
+    </div>
+</footer>
+  
+   
+    
+    <script src="order.js"></script>
+</body>
+</html>

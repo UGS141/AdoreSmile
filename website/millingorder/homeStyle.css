@@ -60,7 +60,7 @@ main {
     padding: 12px 20px;
     font-size: 18px;
     border: none;
-    background-color: #007BFF;
+    background-color: #d39e0cf9;
     color: white;
     cursor: pointer;
     display: flex;
@@ -71,7 +71,7 @@ main {
 }
 
 .order-type-btn:hover {
-    background-color: #0056b3;
+    background-color: #d39e0cf9;
 }
 
 .order-type-btn i {

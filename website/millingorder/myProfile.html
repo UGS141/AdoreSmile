@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | AdoreSmile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="profilecommonstyle.css">
+    <link rel="stylesheet" href="headerfooter.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="brand-section">
+                <img src="img/adoresmile.png" alt="AdoreSmile MILLING" class="logo-img">
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="order.html" class="nav-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>Notifications</span>
+                    <div class="notification-count">2</div>
+                </a>
+                <a href="myProfile.html" class="nav-link active">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+   <!-- ... previous code ... -->
+<main class="main-content">
+    <div class="container">
+        <div class="main-heading">
+            <h1>ONLINE ORDER SYSTEM</h1>
+            <span class="heading-underline"></span>
+        </div>
+        <div class="main-content-wrapper">
+            <aside class="sidebar">
+                <h2>Quick Navigation</h2>
+                <ul>
+                    <li class="active"><a href="myProfile.html" class="activeA">My Account</a></li>
+                    <li><a href="myOrders.html" class="inactive">My Orders</a></li>
+                    <li><a href="#" class="inactive">Design & Milling</a></li>
+                    <li><a href="millingorder.html" class="inactive">Milling Order</a></li>
+                    <li><a href="#" class="inactive">Invoice & CIS</a></li>
+                    <li><a href="#" class="inactive">Download</a></li>
+                    <li><a href="#" class="inactive">Price List</a></li>
+                    <li><a href="#" class="inactive">FAQ</a></li>
+                    <li><a href="#" class="inactive">Privacy Policy</a></li>
+                    <li><a href="#" class="inactive">Contact Us</a></li>
+                    <li><a href="#" class="inactive">Logout</a></li>
+                </ul>
+            </aside>
+
+            <div class="content">
+                <div class="content-header">
+                    <h2>My Account</h2>
+                    <div class="tab-navigation">
+                        <button class="tab-btn active" data-tab="personal">
+                            <i class="fas fa-user"></i> Personal Information
+                        </button>
+                        <button class="tab-btn" data-tab="password">
+                            <i class="fas fa-key"></i> Change Password
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="personalInfo">
+                    <div class="profile-section">
+                        <h3>Personal Information</h3>
+                        <div class="profile-form">
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" value="MR VIJAYAKUMAR" required>
+                            </div>
+                            <div class="form-group">
+                                <label>A/C Reference</label>
+                                <input type="text" value="ADORE SMILE Ltd">
+                            </div>
+                            <div class="form-group">
+                                <label>Email *</label>
+                                <input type="email" value="order-milling@adoresmile.co.uk" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Company Name *</label>
+                                <input type="text" value="Adore Smile Ltd" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-section">
+                        <h3>Business Information</h3>
+                        <div class="profile-form">
+                            <div class="form-group">
+                                <label>Billing Contact Name *</label>
+                                <input type="text" value="VIJAYAKUMAR" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Business Type *</label>
+                                <select required>
+                                    <option selected>Dental Lab</option>
+                                    <option>Dental Practice</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Billing Email *</label>
+                                <input type="email" value="adoresmile123@gmail.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Business Name *</label>
+                                <input type="text" value="ADORE SMILE LIMITED" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-section">
+                        <h3>Billing Address</h3>
+                        <div class="profile-form">
+                            <div class="form-group">
+                                <label>Address Line 1 *</label>
+                                <input type="text" value="18 SCALPAY DRIVE" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Address Line 2</label>
+                                <input type="text" value="NEWTON MEARNS">
+                            </div>
+                            <div class="form-group">
+                                <label>City *</label>
+                                <input type="text" value="GLASGOW" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Postal Code *</label>
+                                <input type="text" value="G77 6WA" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Country *</label>
+                                <select required>
+                                    <option selected>United Kingdom</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-section">
+                        <h3>CAD Software</h3>
+                        <div class="profile-form">
+                            <div class="form-group">
+                                <label>CAD Software *</label>
+                                <select required>
+                                    <option selected>EXOCAD</option>
+                                    <option>3Shape</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>General Enquiry</label>
+                                <textarea placeholder="Please write the query (if any, other than CAD)"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn btn-save">
+                            <i class="fas fa-save"></i> Save Changes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tab-content hidden" id="passwordChange">
+                    <div class="profile-section">
+                        <h3>Change Password</h3>
+                        <div class="profile-form">
+                            <div class="form-group">
+                                <label>Current Password *</label>
+                                <input type="password" required>
+                            </div>
+                            <div class="form-group">
+                                <label>New Password *</label>
+                                <input type="password" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm New Password *</label>
+                                <input type="password" required>
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button class="btn btn-save">
+                                <i class="fas fa-key"></i> Update Password
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="rocket-delivery">
+                    <img src="img/adoresmile.png" alt="AdoreSmile" class="footer-logo">
+                    <div class="delivery-text">
+                        <h3>ROCKET DELIVERY</h3>
+                        <p>Order by 11am Same day dispatch!</p>
+                    </div>
+                </div>
+                <div class="company-info">
+                    <p>Registered in England and Wales No. 09701612</p>
+                    <p>Registered Office: 26C Lyon Road, Walton-on-Thames,</p>
+                    <p>Surrey, KT12 3PU United Kingdom</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.add('hidden'));
+                
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab === 'personal' ? 'personalInfo' : 'passwordChange')
+                    .classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

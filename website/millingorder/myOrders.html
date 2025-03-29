@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoresmile | My Orders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="myorders.css">
+    <link rel="stylesheet" href="profilecommonstyle.css">
+    <link rel="stylesheet" href="headerfooter.css">
+    <script defer src="myorders.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="brand-section">
+                <img src="img/adoresmile.png" alt="AdoreSmile MILLING" class="logo-img">
+                <!-- <div class="brand-text">
+                    <h1>AdoreSmile</h1>
+                    <div class="brand-subtitle">DENTAL MILLING</div>
+                </div> -->
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="order.html" class="nav-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>Notifications</span>
+                    <div class="notification-count">2</div>
+                </a>
+                <a href="myOrders.html" class="nav-link">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <aside class="sidebar">
+                <h2>ONLINE ORDER SYSTEM</h2>
+                <ul class="sidebar-menu">
+                    <li><a href="myProfile.html" class="sidebar-item">My Account</a></li>
+                    <li><a href="myOrders.html" class="sidebar-item active">My Orders</a></li>
+                    <li><a href="#" class="sidebar-item">Design & Milling</a></li>
+                    <li><a href="#" class="sidebar-item">Milling Order</a></li>
+                    <li><a href="#" class="sidebar-item">Invoice & CIS</a></li>
+                    <li><a href="#" class="sidebar-item">Download</a></li>
+                    <li><a href="#" class="sidebar-item">Price List</a></li>
+                    <li><a href="#" class="sidebar-item">FAQ</a></li>
+                    <li><a href="#" class="sidebar-item">Privacy Policy</a></li>
+                    <li><a href="#" class="sidebar-item">Contact Us</a></li>
+                    <li><a href="#" class="sidebar-item logout">Logout</a></li>
+                </ul>
+            </aside>
+
+            <div class="content">
+                <div class="content-header">
+                    <h2>My Orders</h2>
+                </div>
+                
+                <div class="filters">
+                    <div class="filter-group">
+                        <input type="text" id="orderNo" placeholder="Search order number">
+                        <input type="text" id="orderRef" placeholder="Search reference">
+                        <input type="date" id="orderDate">
+                        <select id="status">
+                            <option value="">Select Status</option>
+                            <option value="Shipped">Shipped</option>
+                            <option value="Processing">Processing</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-search" onclick="filterOrders()">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                        <button class="btn btn-reset" onclick="resetFilters()">
+                            <i class="fas fa-undo"></i> Reset
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="orders-table">
+                        <thead>
+                            <tr>
+                                <th>Order No.</th>
+                                <th>Tracking No.</th>
+                                <th>Order Ref.</th>
+                                <th>Job Type</th>
+                                <th>Order Date</th>
+                                <th>Status</th>
+                                <th>Shipped By</th>
+                                <th>Shipped Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orderTableBody">
+                            <!-- Orders will be dynamically inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="rocket-delivery">
+                    <img src="img/adoresmile.png" alt="AdoreSmile" class="footer-logo">
+                    <div class="delivery-text">
+                        <h3>ROCKET DELIVERY</h3>
+                        <p>Order by 11am Same day dispatch!</p>
+                    </div>
+                </div>
+                <div class="company-info">
+                    <p>Registered in England and Wales No. 09701612</p>
+                    <p>Registered Office: 26C Lyon Road, Walton-on-Thames,</p>
+                    <p>Surrey, KT12 3PU United Kingdom</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

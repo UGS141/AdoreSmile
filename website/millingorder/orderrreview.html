@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoresmile | Order Review</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .order-review {
+            max-width: 1200px;
+            margin: 100px auto 2rem;
+            padding: 2rem;
+        }
+
+        .order-steps {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+            gap: 2rem;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        .step.active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .step-divider {
+            color: #ccc;
+            margin: 0 1rem;
+        }
+
+        .shipping-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(255,184,0,0.1);
+            outline: none;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-back {
+            background: var(--border-color);
+            color: var(--secondary-color);
+        }
+
+        .btn-next {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .order-review {
+                padding: 1rem;
+                margin-top: 80px;
+            }
+
+            .order-steps {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .step-divider {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header same as other pages -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="img/adoresmile.png" alt="AdoreSmile MILLING">
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="order.html" class="nav-item">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>Notifications</span>
+                    <span class="notification-badge">2</span>
+                </a>
+                <a href="myOrders.html" class="nav-item">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+     
+    <main class="main-content">
+        <div class="welcome-section">
+            <h1>Welcome to AdoreSmile Dental Milling</h1>
+            <h2>Online Order System</h2>
+            <p>Please review your order details below</p>
+            <div class="separator"></div>
+        </div>
+    
+        <div class="shipping-section">
+            <!-- Order Table -->
+            <div class="order-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order No.</th>
+                            <th>Order Reference</th>
+                            <th>Job Type</th>
+                            <th>Job In</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="no-data">
+                            <td colspan="5">There is no data to display.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <h2 class="section-title">Shipping Information</h2>
+            <form id="shippingForm">
+                <div class="form-group">
+                    <label for="shippedBy">Shipped By</label>
+                    <div class="input-with-info">
+                        <input type="text" id="shippedBy" class="form-control" required>
+                        <i class="fas fa-info-circle info-icon" title="Enter shipping method"></i>
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label for="shippingAddress">Shipping Address</label>
+                    <select id="shippingAddress" class="form-control" required>
+                        <option value="">Select shipping address...</option>
+                        <option value="1">Watercress Dental Surgery, ALTON, United Kingdom, GU34 1EF</option>
+                    </select>
+                </div>
+    
+                <div class="checkbox-group">
+                    <input type="checkbox" id="saveAddress">
+                    <label for="saveAddress">Shipping to other address</label>
+                </div>
+    
+                <div id="newAddressFields" style="display: none;">
+                    <div class="form-group">
+                        <label for="line">Line</label>
+                        <input type="text" id="line" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="postalCode">Postal Code</label>
+                        <input type="text" id="postalCode" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" class="form-control">
+                            <option value="United Kingdom">United Kingdom</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <div class="action-buttons">
+                    <button type="button" class="btn btn-back" onclick="history.back()">Back</button>
+                    <div class="right-buttons">
+                        <button type="button" class="btn btn-add-order">+ Add Another Order</button>
+                        <button type="submit" class="btn btn-complete">Complete Order</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- Footer same as other pages -->
+      <!-- Replace the existing footer with this -->
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="rocket-delivery">
+                <img src="img/adoresmile.png" alt="AdoreSmile" class="footer-logo">
+                <div class="delivery-text">
+                    <h3>ROCKET DELIVERY</h3>
+                    <p>Order by 11am Same day dispatch!</p>
+                </div>
+            </div>
+            <div class="company-info">
+                <p>Registered in England and Wales No. 09701612</p>
+                <p>Registered Office: 26C Lyon Road, Walton-on-Thames,</p>
+                <p>Surrey, KT12 3PU United Kingdom</p>
+            </div>
+        </div>
+    </div>
+</footer>
+  
+    <script src="orderreview.js"></script>
+</body>
+</html>
