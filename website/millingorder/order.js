@@ -463,31 +463,8 @@ function showToothIcons() {
             option.textContent = opt;
             select.appendChild(option);
         });
-    
-        container.appendChild(label);
-        container.appendChild(select);
-    
-        return container;
     }
-    
-    // Function to create a horizontal radio group
-    function createRadioGroup(options, name) {
-        const radioGroup = document.createElement("div");
-        radioGroup.classList.add("radio-group");
-    
-        options.forEach((opt) => {
-            const label = document.createElement("label");
-            label.classList.add("radio-label");
-    
-            const radio = document.createElement("input");
-            radio.type = "radio";
-            radio.name = name;
-            label.appendChild(radio);
-            label.appendChild(document.createTextNode(opt));
-            
-            radioGroup.appendChild(label);
-        });
-    
-        return radioGroup;
-    }
-}
+});
+
+// Make removeFile available globally
+(window as any).removeFile = removeFile;
